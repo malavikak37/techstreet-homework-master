@@ -11,6 +11,8 @@ import { LoginService } from './login.service';
 export class LoginComponent {
   loginForm: FormGroup;
   loggedIn: string = null;
+  userName: string = "";
+  password: string = "";
 
   constructor(
     private _service: AngularService,
@@ -29,7 +31,7 @@ export class LoginComponent {
   }
   save() {
     this._service.setDirective(2);
-    this._loginService.login();
+    this._loginService.login(this.userName,this.password);
  
   }
 }
