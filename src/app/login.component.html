@@ -3,4 +3,5 @@
   <input name="username" placeholder="Login" [(ngModel)]="userName" />
   <input name="password" placeholder="Password" type="password" [(ngModel)]="password" />
   <button type="Submit" (click)="save()">Submit</button>
+  <p class="errorValidation" *ngIf="errorValidation">{{errorMessage}}</p>
 </form>
